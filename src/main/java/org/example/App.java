@@ -43,6 +43,16 @@ public class App
         foo(listOfProducts,
                 (Product p) -> p.getProductName().startsWith("B"),
                 (Product p) -> System.out.println(p));
+        foo(listOfProducts,
+                (Product p) -> p.getPrice()>100 && p.getPrice()<150,
+                (Product p) -> System.out.println(p));
+        foo(listOfProducts,
+                (Product p) -> p.getStock()<10 && p.getStock()>0,
+                (Product p) -> p.setPrice((p.getPrice()*1.5)));
+
+        System.out.println(listOfProducts);
+
+
 
     }
 
