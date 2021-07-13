@@ -5,6 +5,12 @@ public class Product {
     private double price;
     private int stock;
 
+    public Product(String productName, double price, int stock) {
+        this.productName = productName;
+        this.price = price;
+        this.stock = stock;
+    }
+
     public String getProductName() {
         return productName;
     }
